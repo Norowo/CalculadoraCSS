@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.String?>
+<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane fx:id="view" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../css/Clasica.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane fx:id="view" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
 	<columnConstraints>
 		<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
 		<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -26,65 +27,93 @@
 		<TextField fx:id="screenText" editable="false" focusTraversable="false" GridPane.columnSpan="5" />
 		<Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNumberButtonHandle" text="7" GridPane.rowIndex="1">
          <styleClass>
-            <String fx:value="botones-grises" />
+            <String fx:value="botones-numericos" />
             <String fx:value="botones" />
          </styleClass></Button>
 		<Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNumberButtonHandle" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1">
          <styleClass>
-            <String fx:value="botones-grises" />
+            <String fx:value="botones-numericos" />
             <String fx:value="botones" />
          </styleClass></Button>
 		<Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNumberButtonHandle" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1">
          <styleClass>
-            <String fx:value="botones-grises" />
+            <String fx:value="botones-numericos" />
             <String fx:value="botones" />
          </styleClass></Button>
-		<Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onOperationButtonHandle" styleClass="botones" text="CE" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-		<Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onOperationButtonHandle" styleClass="botones" text="C" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+		<Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onOperationButtonHandle" text="CE" GridPane.columnIndex="3" GridPane.rowIndex="1">
+         <styleClass>
+            <String fx:value="botones" />
+            <String fx:value="botones-reinicio" />
+         </styleClass></Button>
+		<Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onOperationButtonHandle" text="C" GridPane.columnIndex="4" GridPane.rowIndex="1">
+         <styleClass>
+            <String fx:value="botones" />
+            <String fx:value="botones-reinicio" />
+         </styleClass></Button>
 		<Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNumberButtonHandle" text="4" GridPane.rowIndex="2">
          <styleClass>
-            <String fx:value="botones-grises" />
+            <String fx:value="botones-numericos" />
             <String fx:value="botones" />
          </styleClass></Button>
 		<Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNumberButtonHandle" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2">
          <styleClass>
-            <String fx:value="botones-grises" />
+            <String fx:value="botones-numericos" />
             <String fx:value="botones" />
          </styleClass></Button>
 		<Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNumberButtonHandle" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2">
          <styleClass>
-            <String fx:value="botones-grises" />
+            <String fx:value="botones-numericos" />
             <String fx:value="botones" />
          </styleClass></Button>
-		<Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onOperationButtonHandle" styleClass="botones" text="*" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-		<Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onOperationButtonHandle" styleClass="botones" text="/" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+		<Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onOperationButtonHandle" text="*" GridPane.columnIndex="3" GridPane.rowIndex="2">
+         <styleClass>
+            <String fx:value="botones" />
+            <String fx:value="botones-operacion" />
+         </styleClass></Button>
+		<Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onOperationButtonHandle" text="/" GridPane.columnIndex="4" GridPane.rowIndex="2">
+         <styleClass>
+            <String fx:value="botones" />
+            <String fx:value="botones-operacion" />
+         </styleClass></Button>
 		<Button fx:id="oneButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNumberButtonHandle" text="1" GridPane.rowIndex="3">
          <styleClass>
-            <String fx:value="botones-grises" />
+            <String fx:value="botones-numericos" />
             <String fx:value="botones" />
          </styleClass></Button>
 		<Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNumberButtonHandle" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3">
          <styleClass>
-            <String fx:value="botones-grises" />
+            <String fx:value="botones-numericos" />
             <String fx:value="botones" />
          </styleClass></Button>
 		<Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNumberButtonHandle" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3">
          <styleClass>
-            <String fx:value="botones-grises" />
+            <String fx:value="botones-numericos" />
             <String fx:value="botones" />
          </styleClass></Button>
-		<Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onOperationButtonHandle" styleClass="botones" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+		<Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onOperationButtonHandle" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3">
+         <styleClass>
+            <String fx:value="botones" />
+            <String fx:value="botones-operacion" />
+         </styleClass></Button>
 		<Button defaultButton="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onOperationButtonHandle" styleClass="botones" stylesheets="@../css/Clasica.css" text="=" GridPane.columnIndex="4" GridPane.rowIndex="3" GridPane.rowSpan="2" />
 		<Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNumberButtonHandle" text="0" GridPane.columnSpan="2" GridPane.rowIndex="4">
          <styleClass>
-            <String fx:value="botones-grises" />
+            <String fx:value="botones-numericos" />
             <String fx:value="botones" />
          </styleClass></Button>
 		<Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onCommaButtonHandle" text="," GridPane.columnIndex="2" GridPane.rowIndex="4">
          <styleClass>
-            <String fx:value="botones-grises" />
+            <String fx:value="botones-numericos" />
             <String fx:value="botones" />
          </styleClass></Button>
-		<Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onOperationButtonHandle" styleClass="botones" text="+" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+		<Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onOperationButtonHandle" text="+" GridPane.columnIndex="3" GridPane.rowIndex="4">
+         <styleClass>
+            <String fx:value="botones" />
+            <String fx:value="botones-operacion" />
+         </styleClass></Button>
 	</children>
+   <stylesheets>
+      <URL value="@../css/Clasica.css" />
+      <URL value="@../css/Moderna.css" />
+   </stylesheets>
 </GridPane>
